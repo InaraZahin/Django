@@ -1,0 +1,50 @@
+{% load static %}
+{% block content %}
+
+{% for whyus_blog in whyus %}
+<div class="why-us section-padding bg-gray pos-re">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="img mb-md50">
+<!--                            <img src="img/1.jpg" alt="">-->
+                             <img src= "{{ whyus_blog.image.url }}" alt="">
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="content pt-10">
+                            <div class="item mb-40">
+                                <span class="icon icon-basic-display"></span>
+                                <div class="cont">
+                                    <h5>{{ whyus_blog.p1 }}</h5>
+                                    <p>{{ whyus_blog.p1_d }}</p>
+                                </div>
+                            </div>
+                            <div class="item mb-40">
+                                <span class="icon icon-basic-bolt"></span>
+                                <div class="cont">
+                                    <h5>{{ whyus_blog.p2 }}</h5>
+                                    <p>{{ whyus_blog.p2_d }}</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-headset"></span>
+                                <div class="cont">
+                                    <h5>{{ whyus_blog.p3 }}</h5>
+                                    <p>{{ whyus_blog.p3_d }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="curve curve-top"></div>
+            <div class="curve curve-bottom"></div>
+        </div>
+    {% endfor %}
+{% endblock %}

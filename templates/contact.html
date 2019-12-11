@@ -1,0 +1,91 @@
+{% load static %}
+<section class="contact section-padding" data-scroll-index="6">
+           <div class="container">
+               <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4>Get <span>In</span> Touch</h4>
+                        <p>I am interested in freelance opportunities-esp ambitious and large projects.</p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="contact-info mb-md50">
+                            <h5>Contact Us :</h5>
+                            <p>Don't hesitate to contact me using the form below.</p>
+                            <div class="item">
+                                <span class="icon icon-basic-tablet"></span>
+                                <div class="cont">
+                                    <h6>Phone : </h6>
+                                    <p>+20 010 251 789 18 , 251 789 18</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-mail-open-text"></span>
+                                <div class="cont">
+                                    <h6>Email : </h6>
+                                    <p>inarazahin@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-geolocalize-05"></span>
+                                <div class="cont">
+                                    <h6>Address : </h6>
+                                    <p>4655 Carter Street ,Olney, Illinois</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <form class="form" id="contact-form" method="post" action="{% url 'contact' %}">
+                             {% csrf_token %}
+
+                            <div class="messages"></div>
+
+                            <div class="controls">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_name" type="text" name="name" placeholder="Name" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_email" type="email" name="email" placeholder="Email" required="required">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_phone" type="phone" name="phone" placeholder="Phone" required="required">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_subject" type="text" name="subject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+               </div>
+           </div>
+       </section>

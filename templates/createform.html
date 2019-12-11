@@ -1,0 +1,29 @@
+{% load static %}
+
+<form  method="post" action="{% url 'createpost' %}">
+                        {% csrf_token %}
+
+    <br/><br/>
+   Name: <input type="text" name="name"/><br/><br/>
+   Email: <input type="text" name="email"/><br/><br/>
+   Phone: <input type="text" name="phone"/><br/><br/>
+   Subject: <input type="text" name="subject"/><br/><br/>
+   Message: <input type="text" name="message"/><br/><br/>
+
+
+    <input type="submit" value="Post"/>
+
+
+
+</form>
+
+
+<!--{% for neewobj in post %}-->
+<!--    <h1> {{ neewobj.name }}</h1>-->
+<!--    <h1> {{ neewobj.email }}</h1>-->
+<!--    <h1>{{ neewobj.phone }} </h1>-->
+<!--    <h1>{{ neewobj.subject }} </h1>-->
+<!--    <h1>{{ neewobj.message }} </h1>-->
+
+<!--{% endfor %}-->
+

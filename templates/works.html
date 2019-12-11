@@ -1,0 +1,179 @@
+{% load static %}
+{% block content %}
+
+{% for works in works %}
+<section class="works section-padding" data-scroll-index="2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4><span>Creative</span> Portfolio</h4>
+                        <p>I am passionate and I specialize in beautiful and easy-to-use digital design & web development services.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- filter links -->
+                    <div class="filtering text-center mb-30 col-sm-12">
+                        <div class="filter">
+                            <span data-filter='*' class="active">All</span>
+                            <span data-filter='.brand'>Brand</span>
+                            <span data-filter='.web'>Design</span>
+                            <span data-filter='.graphic'>Graphic</span>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- gallery -->
+                    <div class="gallery full-width">
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items graphic">
+                            <div class="item-img">
+<!--                                <img src="img/portfolio/1.jpg" alt="image">-->
+                                 <img src= "{{works.image1.url }}" alt="">
+
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="{{works.image1.url }}" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items web">
+                            <div class="item-img">
+<!--                                <img src="img/portfolio/2.jpg" alt="image">-->
+                                 <img src= "{{works.image2.url }}" alt="">
+
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="{{works.image2.url }}" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items brand">
+                            <div class="item-img">
+<!--                                <img src="img/portfolio/3.jpg" alt="image">-->
+                                 <img src= "{{works.image3.url }}" alt="">
+
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="{{works.image3.url }}" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items graphic">
+                            <div class="item-img">
+<!--                                <img src="img/portfolio/4.jpg" alt="image">]-->
+                                 <img src= "{{works.image4.url }}" alt="">
+
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="{{works.image4.url }}" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items web">
+                            <div class="item-img">
+<!--                                <img src="img/portfolio/5.jpg" alt="image">-->
+                                 <img src= "{{works.image5.url }}" alt="image">
+
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="{{works.image5.url }}" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items brand">
+                            <div class="item-img">
+                                <img src="static/img/portfolio/5.jpg" alt="image">
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="img/portfolio/6.jpg" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items brand">
+                            <div class="item-img">
+                                <img src="static/img/portfolio/7.jpg" alt="image">
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="static/img/portfolio/7.jpg" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- gallery item -->
+                        <div class="col-lg-3 col-md-6 items graphic">
+                            <div class="item-img">
+                                <img src="static/img/portfolio/8.jpg" alt="image">
+                                <div class="item-img-overlay">
+                                    <div class="overlay-info full-width">
+                                        <p>Logo | Branding</p>
+                                        <h6>Creative Web Design</h6>
+                                        <a href="static/img/portfolio/8.jpg" class="popimg">
+                                            <span class="icon"><i class="fas fa-long-arrow-alt-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+{% endblock %}

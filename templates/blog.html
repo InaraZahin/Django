@@ -1,0 +1,78 @@
+ {% load static %}
+ {% block content %}
+
+{% for blog_blog in blog %}
+<section class="blog section-padding" data-scroll-index="5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4><span>{{ blog_blog.heading }}</span> </h4>
+                        <p> {{ blog_blog.details }}</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item mb-md50">
+                            <div class="post-img">
+                                <div class="img">
+
+                                    <img src= "{{ blog_blog.blog1.url }}" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">By : Admin</a>
+                                    <a href="#0">06 Aug 2017</a>
+                                    <a href="#0" class="tag">WordPress</a>
+                                </div>
+                                <h6><a href="#0">48 Best WordPress Themes</a></h6>
+                                <p>Hey!</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item mb-md50">
+                            <div class="post-img">
+                                <div class="img">
+                                    <img src= "{{ blog_blog.blog2.url }}" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">By : Admin</a>
+                                    <a href="#0">06 Aug 2017</a>
+                                    <a href="#0" class="tag">WordPress</a>
+                                </div>
+                                <h6><a href="#0">48 Best WordPress Themes</a></h6>
+                                <p>Welcome</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="post-img">
+                                <div class="img">
+                                    <img src= "{{ blog_blog.blog3.url }}" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">By : Admin</a>
+                                    <a href="#0">06 Aug 2017</a>
+                                    <a href="#0" class="tag">WordPress</a>
+                                </div>
+                                <h6><a href="#0">48 Best WordPress Themes</a></h6>
+                                <p>to my blog :)</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+   {% endfor %}
+{% endblock %}

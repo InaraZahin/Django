@@ -1,0 +1,24 @@
+{% load static %}
+{% block content %}
+
+{% for action_blog in action %}
+<section class="call-action section-padding bg-img bg-fixed" data-overlay-dark="5" data-background="{{ action_blog.background.url }}">
+<!--    <img src= "{% static 'img/blog/1.jpg' %}" alt="">-->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h2>Want to work with me?</h2>
+                            <h5>Tell me about your project</h5>
+                            <a href="#0" class="butn butn-bg">
+                                <span>Get Started</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,173 @@
+{% load static %}
+{% block content %}
+
+{% for hero_blog in hero %}
+{% for about_blog in abt %}
+<section class="hero" data-scroll-index="1">
+            <div class="section-padding pos-re">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 text-center mb-80">
+                            <h4 class="extra-title">{{ hero_blog.title_one }} <span>{{ hero_blog.title_one_sub1 }}</span> {{ hero_blog.title_one_sub2 }}</h4>
+<!--                            <p>{{ hero_blog.title_two }}</p>-->
+                        </div>
+
+                        <div class="feat-item mb-md50 col-lg-4">
+                            <div class="text-center">
+                                <span class="icon icon-basic-anchor"></span>
+                                <h5>Web Design</h5>
+                                <h6>Modern & Clean Design</h6>
+                                <p>We designing is my passion</p>
+                            </div>
+                        </div>
+
+                        <div class="feat-item active mb-md50 col-lg-4">
+                            <div class="text-center">
+<!--                                <span class="icon icon-basic-pencil-ruler"></span>-->
+                                <span class="icon icon-basic-bolt"></span>
+                                <span class="{{ hero_blog.title_two  }}"></span>
+                                <h5>Development</h5>
+                                <h6>Web & Mobile Development</h6>
+                                <p>I have made several websites and mobile apps so far</p>
+                            </div>
+                        </div>
+
+                        <div class="feat-item col-lg-4">
+                            <div class="text-center">
+                                <span class="icon icon-basic-cards-diamonds"></span>
+                                <h5>Branding</h5>
+                                <h6>Logo & Motion Design</h6>
+                                <p>I have worked with logos and motion designs too</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="curve curve-gray-b curve-bottom"></div>
+            </div>
+
+            <div class="tabs-section section-padding bg-gray">
+                <div class="container">
+                    <div class="row">
+
+                        <ul class="col-md-12 nav nav-pills tabs" id="pills-tab" role="tablist">
+                            <li class="nav-item one active">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">{{ about_blog.t_one }}</a>
+                            </li>
+                            <li class="nav-item two">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">{{ about_blog.t_two }}</a>
+                            </li>
+                            <li class="nav-item three">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">{{ about_blog.t_three }}</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content col-lg-12" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="about box-white">
+                                            <h5 class="title">{{ about_blog.t_one }}</h5>
+                                            <h6 class="sub-title">{{ about_blog.t_one_sub1 }}</h6>
+                                            <p>{{ about_blog.t_one_sub2 }}</p>
+
+                                            <!-- Skills -->
+
+                                            <div class="skills mt-40">
+                                                <div class="skill-item mb-30">
+                                                    <h6>Web Design</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="90%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-item mb-30">
+                                                    <h6>Branding</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="75%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-item">
+                                                    <h6>Development</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="80%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img">
+<!--                                            <img src="" alt="">-->
+                                            <img src= "{{ about_blog.img.url }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="mission box-white">
+                                            <h5 class="title">{{ about_blog.t_two }}</h5>
+                                            <h6 class="sub-title">{{ about_blog.t_two_sub1 }}</h6>
+<!--                                            <p class="mb-10"><b>We’re full service which means</b> we’ve got you covered on design and content right through to digital. You’ll form a lasting relationship with us, <b>collaboration is central to</b> everything we do. <b>We’ll push you out of</b> your comfort zone from time, but this is where you’ll shine. Bottom line is we want you to succeed at Faculty.</p>-->
+                                            <p>{{ about_blog.t_two_sub2 }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img">
+<!--                                            <img src="" alt="">-->
+                                            <img src= "{{ about_blog.img1.url }}" alt="">
+                                            <a class="vid" href="https://vimeo.com/127203262">
+                                                <span class="vid-butn">
+                                                    <i class="fas fa-play-circle"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="why-us box-white">
+                                            <h5 class="title">{{ about_blog.t_three }}</h5>
+                                            <h6 class="sub-title">{{ about_blog.t_three_sub1 }}</h6>
+                                            <p>{{ about_blog.t_three_sub2 }}</p>
+                                            <ul class="feat mt-30 row">
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-display"></span>
+                                                    <h6>{{ about_blog.quality1 }}</h6>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-picture-multiple"></span>
+                                                    <h6>{{ about_blog.quality2 }}</h6>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-headset"></span>
+                                                    <h6>{{ about_blog.quality3 }}</h6>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img owl-carousel owl-theme carousel-single">
+<!--                                            <img src="img/4.jpg" alt="">-->
+<!--                                            <img src="img/5.jpg" alt="">-->
+<!--                                            <img src="img/2.jpg" alt="">-->
+                                            <img src= "{{ about_blog.img2.url }}" alt="">
+                                            <img src= "{{ about_blog.img3.url }}" alt="">
+                                            <img src= "{{ about_blog.img4.url }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

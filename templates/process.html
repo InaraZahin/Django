@@ -1,0 +1,74 @@
+{% load static %}
+{% block content %}
+{% for proc_blog in proc %}
+<div class="process section-padding bg-img bg-fixed pos-re text-center" data-overlay-dark="7" data-background="{{ proc_blog.image.url }}">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4>{{ proc_blog.t1 }}</h4>
+                        <p>{{ proc_blog.d1 }}</p>
+                    </div>
+                    <div class="full-width clearfix"></div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item first mb-md50">
+<!--                            <img src="img/arrow.png" class="tobotm" alt="">-->
+                            <img src= "{% static 'img/arrow.png' %}" class="tobotm"  alt="">
+                            <span class="icon icon-basic-key"></span>
+                            <div class="cont">
+                                <h3>01</h3>
+                                <h6>{{ proc_blog.p1 }}</h6>
+                                <p>{{ proc_blog.p1_d }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item odd mb-md50">
+
+                            <img src= "{% static 'img/arrow.png' %}" alt="">
+
+                            <span class="icon icon-basic-pencil-ruler-pen"></span>
+                            <div class="cont">
+                                <h3>02</h3>
+                                <h6>{{ proc_blog.p2 }}</h6>
+                                <p>{{ proc_blog.p2_d }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item mb-sm50">
+<!--                            <img src="img/arrow.png" class="tobotm" alt="">-->
+                             <img src= "{% static 'img/arrow.png' %} " class="tobotm"  alt="">
+
+                            <span class="icon icon-basic-settings"></span>
+                            <div class="cont">
+                                <h3>03</h3>
+                                <h6>{{ proc_blog.p3 }}</h6>
+                                <p>{{ proc_blog.p3_d }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item odd">
+                            <span class="icon icon-basic-server-download"></span>
+                            <div class="cont">
+                                <h3>04</h3>
+                                <h6>{{ proc_blog.p4 }}</h6>
+                                <p>{{ proc_blog.p4_d }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="curve curve-gray-t curve-top"></div>
+            <div class="curve curve-bottom"></div>
+        </div>
+
+    {% endfor %}
+{% endblock %}
